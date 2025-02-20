@@ -84,6 +84,7 @@ export default function Default() {
 
 
           <div className="flex flex-col mb-2 sm:mt-10">
+
             <Link
               href='/checkout'
               className="btn-primary flex w-full sm:w-1/2 justify-center ">

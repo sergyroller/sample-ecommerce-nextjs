@@ -1,16 +1,26 @@
 import { QuantitySelector, Title } from "@/components";
+import { redirect } from "next/navigation";
 import { initialData } from "@/seed/seed";
 import Link from "next/link";
 import Image from "next/image";
 
+
+
+const productsInCart = [
+   initialData.products[0],
+   initialData.products[1],
+   initialData.products[2],
+
+]
+
 export default function Default() {
 
-   const productsInCart = [
-      initialData.products[0],
-      initialData.products[1],
-      initialData.products[2],
 
-   ]
+   if(productsInCart.length < 1) {
+      redirect('empty')
+   }
+
+
 
    return (
      <div className="flex justify-center items-center mb-72 px-10 sm:px-0">

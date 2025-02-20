@@ -3,14 +3,14 @@ import { initialData } from "@/seed/seed";
 import Link from "next/link";
 import Image from "next/image";
 
+const productsInCart = [
+   initialData.products[0],
+   initialData.products[1],
+   initialData.products[2],
+
+]
+
 export default function Default() {
-
-   const productsInCart = [
-      initialData.products[0],
-      initialData.products[1],
-      initialData.products[2],
-
-   ]
 
    return (
      <div className="flex justify-center items-center mb-72 px-10 sm:px-0">
@@ -88,6 +88,11 @@ export default function Default() {
                   </div>
 
                   <div className="mt-5 mb-2 w-full">
+                     <p className='mb-5'>
+                        <span className='text-xs'>
+                        Al hacer click en &quot;Confirmar Pedido&quot;, confirmas que has revisado y aceptado nuestros términos y condiciones.
+                        </span>
+                     </p>
                      <Link
                      href="/orders/123"
                      className="flex btn-primary justify-center"

@@ -41,7 +41,6 @@ export default async function Default({ params }: Props) {
       <>
          <Title title={`Articulos ${ labels[id]}`}  subtitle={`${subtitles[id]}`} className="mb-2"></Title>
          <ProductGrid products={ products } />
-         <h1>CategoryPage {id}</h1>
       </>
    );
 }

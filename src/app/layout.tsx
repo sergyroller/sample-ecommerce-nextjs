@@ -1,10 +1,6 @@
-import type { Metadata } from "next";
-import { inter } from "@/config/fonts";
-import "./globals.css";
-
-
-
-
+import type { Metadata } from 'next';
+import { inter } from '@/config/fonts';
+import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Teslo | Shop',
@@ -18,9 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${inter.className} ${inter.className} antialiased`}
-      >
+      <body className={`${inter.className} ${inter.className} antialiased`}>
         {children}
       </body>
     </html>

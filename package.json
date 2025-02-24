@@ -7,9 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write . --ignore-path .gitignore"
+    "format": "prettier --write . --ignore-path .gitignore",
+    "seed": "ts-node src/seed/seed-database.ts"
   },
   "dependencies": {
+    "@prisma/client": "^6.4.1",
     "clsx": "^2.1.1",
     "next": "15.1.7",
     "react": "19.0.0",
@@ -27,7 +29,9 @@
     "eslint-config-next": "15.1.7",
     "postcss": "8",
     "prettier": "^3.5.1",
+    "prisma": "^6.4.1",
     "tailwindcss": "3.4.1",
+    "ts-node": "^10.9.2",
     "typescript": "5"
   }
 }

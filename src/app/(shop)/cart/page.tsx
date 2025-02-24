@@ -1,6 +1,6 @@
-import { QuantitySelector, Title } from '@/components';
-import { redirect } from 'next/navigation';
-import { initialData } from '@/seed/seed';
+import {QuantitySelector, Title} from '@/components';
+import {redirect} from 'next/navigation';
+import {initialData} from '@/seed/seed';
 import Link from 'next/link';
 import Image from 'next/image';
 

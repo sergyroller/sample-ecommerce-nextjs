@@ -4,9 +4,9 @@ import {
   QuantitySelector,
   SizeSelector,
 } from '@/components';
-import { titleFont } from '@/config/fonts';
-import { initialData } from '@/seed/seed';
-import { notFound } from 'next/navigation';
+import {titleFont} from '@/config/fonts';
+import {initialData} from '@/seed/seed';
+import {notFound} from 'next/navigation';
 
 interface Props {
   params: {
@@ -14,8 +14,13 @@ interface Props {
   };
 }
 
-export default function Default({ params }: Props) {
-  const { slug } = params;
+export default async function Default({params}: Props) {
+  /*
+  export default async function Default
+  'await' has no effect on the type of this expression.ts(80007)
+  ESTO DEBE SER UN PROBLEMA CON TS Y NEXT 15. EN LA DOCUMENTACION DE NEXT DICE QUE LAS FUNCIONES DEBEN SER ASYNC
+  */
+  const {slug} = await params;
   const product = initialData.products.find((product) => product.slug === slug);
 
   if (!product) {

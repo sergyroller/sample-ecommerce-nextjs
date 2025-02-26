@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write . --ignore-path .gitignore",
-    "seed": "ts-node src/seed/seed-database.ts"
+    "seed": "ts-node src/seed/seed-database.ts",
+    "commit": "git add . && aicommits --t conventional"
   },
   "dependencies": {
     "@prisma/client": "^6.4.1",

@@ -55,7 +55,7 @@ model ProductImage {
   id Int @id @default(autoincrement())
   url String
 
-  productImage Product @relation(fields: [productImageId], references: [id])
-  productImageId String
+  product Product @relation(fields: [productId], references: [id])
+  productId String @map("productImageId")
   // TAREA: Relación con el productID referencia a id de Producto
 }
